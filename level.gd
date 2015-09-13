@@ -1,4 +1,5 @@
 export var spawn_distance = 500
+export var min_obstacles = 50
 
 var bat
 var obstacles = []
@@ -29,7 +30,7 @@ func _process(time):
 			o.collided(bat)
 			break
 
-	while obstacles.size() < 10:
+	while obstacles.size() < min_obstacles:
 		spawn_obstacle()
 
 func spawn_obstacle():
