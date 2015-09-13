@@ -18,6 +18,7 @@ func restart():
 	emit_signal("game_reset")
 	set_process(true)
 	spawn_ofs = 1000
+	get_node("animation").play("game_restart")
 	
 func _process(time):
 	var bat_area = bat.get_node("area")
@@ -47,6 +48,9 @@ func spawn(obstacle):
 	
 func despawn(obstacle):
 	obstacles.erase(obstacle)
+
+func bat_died():
+	get_node("animation").play("game_over")
 
 func _ready():
 	bat = get_node("bat")

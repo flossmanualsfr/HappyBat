@@ -24,6 +24,7 @@ func die():
 	animation.play("dead")
 	dead = true
 	set_process_input(false)
+	level.bat_died()
 
 func impulse():
 	impulse_cur = impulse_force
