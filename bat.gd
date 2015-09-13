@@ -21,7 +21,7 @@ func start():
 	dead = false
 
 func die():
-	animation.play("die")
+	animation.play("dead")
 	dead = true
 	set_process_input(false)
 
