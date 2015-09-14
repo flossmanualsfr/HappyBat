@@ -9,7 +9,6 @@ var spawn_ofs = 1000
 
 func _input(event):
 	if event.is_action("restart") && event.is_pressed() && !event.is_echo():
-		printt("restart!")
 		restart()
 
 func restart():
@@ -61,4 +60,3 @@ func _ready():
 	
 	add_user_signal("game_reset")
 
-	randomize()
