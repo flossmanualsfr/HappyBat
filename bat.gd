@@ -28,6 +28,7 @@ func die():
 
 func impulse():
 	impulse_cur = impulse_force
+	animation.play("impulse")
 
 func stop():
 	set_process(false)
